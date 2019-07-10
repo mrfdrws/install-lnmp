@@ -13,6 +13,7 @@ sudo echo /etc/nginx/sites-available/default
 
 uri='$uri'
 args='$args'
+err='"public, max-age=31536000, immutable"'
 
 sudo echo "server {
   listen 80 default_server;
@@ -43,7 +44,7 @@ sudo echo "server {
 
  location ~* \.(js|css|png|jpg|jpeg|gif|svg|ico|eot|otf|ttf|woff|txt|xsl)$ {
   add_header Access-Control-Allow-Origin *;
-  add_header Cache-Control "public, max-age=31536000, immutable"; access_log off;
+  add_header Cache-Control $err; access_log off;
   log_not_found off;
   }
 
