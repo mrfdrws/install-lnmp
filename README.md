@@ -30,9 +30,11 @@ dos2unix ./create-db.sh
 
 bash ./create-db.sh
 
-# install wordpress
+# install wordpress dan domain
 
-cd /var/www/html
+dos2unix ./tambah_domainwordpress.sh
+
+bash ./tambah_domainwordpress.sh
 
 
 
