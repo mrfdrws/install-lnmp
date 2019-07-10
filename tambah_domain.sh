@@ -4,6 +4,8 @@ echo "Domain layer pisahkan dengan spasi setelah nama_domain"
 read -p 'Name app: ' name_app
 read -p 'Nama domain: ' name_domain
 
+uri='$uri'
+args='$args'
 
 sudo echo "server {
   listen 80;
@@ -51,3 +53,5 @@ sudo ln -s /etc/nginx/sites-available/$name_app /etc/nginx/sites-enabled
 mkdir /var/www/html/$name_app
 
 chown -R www-data:www-data /var/www
+
+service nginx restart
