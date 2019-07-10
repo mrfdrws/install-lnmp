@@ -1,5 +1,7 @@
 # install-npm
 
+login server dengan putty
+
 # pertama install dos2unix
 
 apt-get install dos2unix
