@@ -1,11 +1,13 @@
 #!/bin/bash -e
-echo "Masukkan nama app dan domain."
-echo "Domain layer pisahkan dengan spasi setelah nama_domain"
-read -p 'Name app: ' name_app
-read -p 'Nama domain: ' name_domain
 
 uri='$uri'
 args='$args'
+err='"public, max-age=31536000, immutable"'
+
+echo "Masukkan nama app dan domain."
+read -p 'Name app: ' name_app
+echo "Domain layer pisahkan dengan spasi setelah nama_domain"
+read -p 'Nama domain: ' name_domain
 
 sudo echo "server {
   listen 80;
@@ -32,7 +34,7 @@ sudo echo "server {
 
   location ~* \.(js|css|png|jpg|jpeg|gif|ico|eot|otf|ttf|woff|txt|xsl)$ {
    add_header Access-Control-Allow-Origin *;
-   add_header Cache-Control "public, max-age=31536000, immutable"; access_log off;
+   add_header Cache-Control $err; access_log off;
    log_not_found off;
   }
  
@@ -51,6 +53,8 @@ sudo echo "server {
 sudo ln -s /etc/nginx/sites-available/$name_app /etc/nginx/sites-enabled
 
 mkdir /var/www/html/$name_app
+
+sudo echo "your server connected!" > /var/www/html/$name_app/index.php
 
 chown -R www-data:www-data /var/www
 
