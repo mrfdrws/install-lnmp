@@ -13,6 +13,9 @@ sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default_ba
 
 sudo echo /etc/nginx/sites-available/default
 
+uri='$uri'
+args='$args'
+
 sudo echo "server {
   listen 80 default_server;
 
