@@ -26,9 +26,9 @@ cek lokasi direktor di /var/www/html
 
 # create database, user, password
 
-dos2unix ./create-db.sh
+dos2unix ./create_db.sh
 
-bash ./create-db.sh
+bash ./create_db.sh
 
 # install wordpress dan domain
 
