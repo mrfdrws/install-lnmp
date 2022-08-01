@@ -1,5 +1,5 @@
-# install-lnmp
-## install-npm
+# install LNMP
+### install-npm
 
 login putty dengan user root 
 
@@ -13,7 +13,7 @@ dos2unix ./install-lnmp.sh
 
 bash ./install-lnmp.sh
 
-## tambah domain
+### tambah domain
 
 dos2unix ./tambah-domain.sh
 
@@ -25,13 +25,13 @@ masukkan nama domain
 
 cek lokasi direktor di /var/www/html
 
-## create database, user, password
+### create database, user, password
 
 dos2unix ./create_db.sh
 
 bash ./create_db.sh
 
-## install wordpress dan domain
+### install wordpress dan domain
 
 dos2unix ./tambah_domainwordpress.sh
 
