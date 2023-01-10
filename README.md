@@ -5,9 +5,9 @@ login putty dengan user root
 
 apt-get install dos2unix
 
-git clone https://github.com/mrfdrws/install-npm.git
+git clone https://github.com/mrfdrws/install-lnpm.git
 
-cd install-npm
+cd install-lnpm
 
 dos2unix ./install-lnmp.sh
 
